@@ -1,0 +1,22 @@
+PREGUNTA 3 – PARTE A: FUNCIÓN DE LOS BLOQUES
+
+| Bloque | Función principal |
+|--------|--------------------|
+| CPU | Ejecuta las instrucciones del programa, realiza operaciones y coordina el funcionamiento del microcontrolador. |
+| Memoria Flash | Almacena de forma no volátil el programa y los datos que deben conservarse aunque se apague el microcontrolador. |
+| Memoria RAM | Almacena temporalmente las variables y datos que utiliza el programa mientras se está ejecutando. |
+| GPIO | Permite configurar pines como entradas o salidas digitales para leer señales o controlar dispositivos externos. |
+| ADC | Convierte señales analógicas, como las de un sensor, en valores digitales que la CPU puede procesar. |
+| UART | Permite la comunicación serial mediante la transmisión y recepción de datos entre el microcontrolador y otros dispositivos. |
+| Timers | Permiten medir intervalos de tiempo con gran precisión utilizando el reloj interno del microcontrolador. Ejecutan tareas periódicas sin bloquear el programa principal. |
+| Clock | Proporciona la señal de reloj que sincroniza y establece la velocidad de operación de los bloques del microcontrolador. |
+
+PREGUNTA 3 – PARTE B: PREGUNTAS DE COMPRENSIÓN
+
+1. La memoria Flash es no volátil y conserva el programa y los datos aunque se apague el microcontrolador. La memoria RAM es volátil y almacena temporalmente los datos utilizados durante la ejecución del programa.
+
+2. El ADC convierte una señal analógica en un valor digital para que la CPU pueda procesarla.
+
+3. El bloque UART permite la comunicación serial con una computadora.
+
+4. Utilizaría el bloque GPIO, configurando uno de sus pines como salida digital. De esta manera, el microcontrolador puede enviar un nivel lógico alto o bajo para encender o apagar el LED.
