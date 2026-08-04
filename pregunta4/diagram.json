@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "ALEXANDER FRANCISCO SEGOVIA RAZO",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 15.8,
+      "left": 211.2,
+      "attrs": { "color": "blue", "xray": "1", "bounce": "0", "label": "SW1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 102.2,
+      "left": 211.2,
+      "attrs": { "color": "red", "xray": "1", "bounce": "0", "label": "SW2" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -14.4,
+      "left": 124.25,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 4,
+      "left": -181.3,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 100.8,
+      "left": -192.55,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -126.1, "left": -153.8, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -33.6,
+      "left": 153.05,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:18", "btn1:2.l", "blue", [ "h81.64", "v-57.8" ] ],
+    [ "btn2:2.l", "esp:17", "red", [ "h-57.6", "v-19" ] ],
+    [ "esp:3V3", "r1:1", "red", [ "h-33.41", "v-76.8", "h182.4" ] ],
+    [ "r1:2", "esp:17", "red", [ "h0", "v114" ] ],
+    [ "esp:GND.2", "btn1:1.l", "black", [ "v0" ] ],
+    [ "rgb1:COM", "r2:1", "black", [ "v0" ] ],
+    [ "r2:2", "esp:CMD", "black", [ "h0", "v37.2" ] ],
+    [ "rgb1:G", "esp:26", "green", [ "v0" ] ],
+    [ "esp:25", "rgb1:B", "blue", [ "v0", "h-110.21" ] ],
+    [ "rgb1:R", "esp:27", "red", [ "v115.2", "h28.8", "v-28.8" ] ],
+    [ "esp:3V3", "pot1:VCC", "red", [ "h0" ] ],
+    [ "esp:34", "pot1:SIG", "green", [ "h0" ] ],
+    [ "pot1:GND", "esp:CMD", "black", [ "v19.2", "h-67.2", "v57.6" ] ],
+    [ "btn1:1.r", "btn2:1.r", "black", [ "v0", "h19.4", "v76.8" ] ],
+    [ "r3:2", "btn1:2.l", "blue", [ "h0", "v37.2" ] ],
+    [ "r3:1", "esp:3V3", "red", [ "h0", "v-19.2", "h-211.2", "v57.6" ] ]
+  ],
+  "dependencies": {}
+}
